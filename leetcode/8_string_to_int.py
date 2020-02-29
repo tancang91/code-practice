@@ -50,10 +50,10 @@ class Solution:
 import unittest
 class TestMyAtoi(unittest.TestCase):
     
-    def setUp(self):
+    def setUp(self) -> None:
         self.solution = Solution()
 
-    def test_result(self):
+    def test_result(self) -> None:
         self.assertEqual(self.solution.myAtoi('6996'), 6996)
         self.assertEqual(self.solution.myAtoi('+12345'), 12345)
         self.assertEqual(self.solution.myAtoi('-12345'), -12345)
@@ -65,7 +65,6 @@ class TestMyAtoi(unittest.TestCase):
         self.assertEqual(self.solution.myAtoi('--1'), 0)
         self.assertEqual(self.solution.myAtoi('++1'), 0)
         self.assertEqual(self.solution.myAtoi(''), 0)
-        self.assertEqual(self.solution.myAtoi(None), 0)
         self.assertEqual(self.solution.myAtoi(str(INT_MAX)), INT_MAX)
 
 if __name__ == '__main__':

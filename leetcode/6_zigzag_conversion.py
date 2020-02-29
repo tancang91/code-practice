@@ -16,7 +16,7 @@ class Solution:
 
         arr: list = []
         i = count = 0
-        length = len(s)
+        length: int = len(s)
 
         while count < length:
             while count < length and i < numRows:
@@ -39,10 +39,10 @@ class Solution:
 import unittest
 class TestConvert(unittest.TestCase):
     
-    def setUp(self):
+    def setUp(self) -> None:
         self.solution = Solution()
 
-    def test_result(self):
+    def test_result(self) -> None:
         self.assertEqual(self.solution.convert('PAYPALISHIRING', 3), 'PAHNAPLSIIGYIR')
         self.assertEqual(self.solution.convert('PAYPALISHIRING', 4), 'PINALSIGYAHRPI')
         self.assertEqual(self.solution.convert('PAYPALISHIRING', 100), 'PAYPALISHIRING')
